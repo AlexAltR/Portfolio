@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/8c5f8983b2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header>
+		<!--Блок header с адаптивным меню через check-box-->
+		<div class="header-container">
+			<div class="logo">
+				<img src="img/LOGO.png" alt="logo">
+			</div>
+			<input type="checkbox" id="menu-checkbox">
+			<nav role="navigation">
+				<label for="menu-checkbox" class="toggle-button" data-open="MENU" data-close="CLOSE" onclick></label>
+				<ul class="main-menu">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">PORTFOLIO</a></li>
+					<li><a href="#">BLOG</a></li>
+					<li><a href="#">ABOUT US</a></li>
+					<li><a href="#">CONTACT</a></li>
+				</ul>
+			</nav>
+		</div>
+
+				
+	</header>
+
+
+
+
+	<main>
+		<!--Первая секция "top-slide" с картинкой и желтым текстом-->
+		<section class="top-slide">
+			<div class="top-container">
+				<div class="block-slide">
+					<div><h2>we believe</h2></div>
+					<div><h2>in quality design</h2></div>
+				
+					<div><p>Any creative project is unique</p></div>
+					<div><p>and should be provided with</p></div>
+					<div><p>the appropriate quality</p></div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+
+
+		<!--Вторая секция "main-slide" с желтыми слайдами-->
+		<section class="main-slide">
+			<div class="wrapper">
+				<div class="text">
+					<h3>We create quality designs.</h3>
+					<p>We specialize in Web Design / Development and Graphic Design</p>
+				</div>
+
+				<div class="slides">
+
+					<div class="slide-first">
+						<div class="block-img">
+							<img src="img/flyga.png">
+						</div>
+						<p class="text-slide">
+							Redesigning With Personality
+						</p>
+					</div>
+
+					
+					<div class="slide">
+						<div class="block-img">
+							<img src="img/comp.png">
+							<p>Web development</p>
+						</div>
+						<p class="text-slide">
+							Lorem ipsum dolor sit amet, consectetur.
+						</p>
+					</div>
+
+					<div class="slide">
+						<div class="block-img">
+							<img src="img/design.png">
+							<p>Web design</p>
+						</div>
+						<p class="text-slide">
+							Lorem ipsum dolor sit amet, consectetur.
+						</p>
+					</div>
+
+					<div class="slide">
+						<div class="block-img">
+							<img src="img/pencil.png">
+							<p>graphic design</p>
+						</div>
+						<p class="text-slide">
+							Lorem ipsum dolor sit amet, consectetur.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--Третья секция "portfolio" с портфолио и применением jQuary-->
+		<section class="portfolio">
+			<div class="wrapper">
+			<h4>OUR WORK</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit nisi asperiores consequatur nulla aspernatur.</p>
+			</div>
+			<!--Кнопки управления галереей-->
+			<div class="toggles">
+				<button id="showAll">Show all</button>
+				<button id="webDev">Wed development</button>
+				<button id="webDes">Web design</button>
+				<button id="graphDes">Graphic design</button>
+			</div>
+			
+			<!--Блок posts с картинками привязан к jQuary через классы-->
+			<div class="posts">
+				<div class="post webDev"><img src="img/Portfolio1.png"></div>
+				<div class="post showAll"><img src="img/Portfolio2.png"></div>
+				<div class="post webDes"><img src="img/Portfolio3.png"></div>
+				<div class="post showAll"><img src="img/Portfolio4.png"></div>
+				<div class="post graphDes"><img src="img/Portfolio5.png"></div>
+				<div class="post showAll"><img src="img/Portfolio1.png"></div>
+				<div class="post webDev"><img src="img/Portfolio2.png"></div>
+				<div class="post webDes"><img src="img/Portfolio3.png"></div>
+			</div>
+		</section>
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--Четвертая секция "clients-slide" с заголовком текстом и слайдером партнеров-->
+		<section class="clients-slide">
+			<h4>OUR CLIENTS</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus atque, similique nemo ad cum.</p>
+
+			<!--Делаем слайдер через плагин-->
+			<div class="owl-carousel">
+				<div><img src="img/BBC.png" alt="bbc"></div>
+				<div><img src="img/Apple.png" alt="apple"></div>
+				<div><img src="img/Company.png" alt="Company"></div>
+				<div><img src="img/Ford.png" alt="Ford"></div>
+				<div><img src="img/Nokia.png" alt="Nokia"></div>
+				<div><img src="img/Virgin.png" alt="Virgin"></div>
+				<div><img src="img/Wiexa.png" alt="Wiexa"></div>
+				<div><img src="img/BBC.png" alt="bbc"></div>
+				<div><img src="img/Apple.png" alt="apple"></div>
+				<div><img src="img/Company.png" alt="Company"></div>
+				<div><img src="img/Ford.png" alt="Ford"></div>
+				<div><img src="img/Nokia.png" alt="Nokia"></div>
+				<div><img src="img/Virgin.png" alt="Virgin"></div>
+				<div><img src="img/Wiexa.png" alt="Wiexa"></div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+
+
+
+
+
+
+
+
+	<footer>
+		<div class="main-footer">
+			<!--Первая колонка в блоке-->
+			<div class="about-us">
+				<h4>About Us</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus fugit, amet est. Eum voluptatibus, distinctio veniam cumque earum fuga voluptate. Sed amet molestias cumque fuga, facere omnis provident debitis, rerum perspiciatis esse neque qui culpa soluta voluptates laudantium fugit velit voluptatem.</p>
+				<div class="botton-learn">
+					<button class="learn">Learn more</button>
+				</div>
+				<div class="photo-block">
+					<h4>Photo Stream</h4>
+					<div class="photos">
+						<img src="img/Слой-1.png" alt="Слой-1">
+						<img src="img/Слой-2.png" alt="Слой-2">
+						<img src="img/Слой-3.png" alt="Слой-3">
+						<img src="img/Слой-4.png" alt="Слой-4">
+						<img src="img/Слой-5.png" alt="Слой-5">
+						<img src="img/Слой-6.png" alt="Слой-6">
+					</div>
+				</div>
+			</div>
+			
+		
+
+		<!--Вторая колонка в блоке-->
+		<!--Твиты-->
+		<div class="tweets">
+			<h4>Latest tweets</h4>
+			<!--Первый твит-->
+			<div class="tweet">
+				<div class="chiken"><i class="fab fa-twitter"></i></div>
+				<div class="tweet-info">
+					<p>Check Out Dtbaker's <span class="yellow-text">@Arduino</span> Sales Notification <span class="yellow-text">#System</span></p>
+					<p class="days"><span class="yellow-text">3 days ago</span></p>
+				</div>
+			</div>
+
+			<!--Второй твит-->
+			<div class="tweet">
+				<div class="chiken"><i class="fab fa-twitter"></i></div>
+				<div class="tweet-info">
+					<p>Community Superstar Winner – <span class="yellow-text">#OrganicBeeMedia</span></p>
+					<p class="days"><span class="yellow-text">3 days ago</span></p>
+				</div>
+			</div>
+
+			<!--Третий твит-->
+			<div class="tweet">
+				<div class="chiken"><i class="fab fa-twitter"></i></div>
+				<div class="tweet-info">
+					<p>Clean <span class="yellow-text">#Websites</span> Designs for Your <span class="yellow-text">#Inspiration</span></p>
+					<p class="days"><span class="yellow-text">5 days ago</span></p>
+				</div>
+			</div>
+
+			<!--Четвертый твит-->
+			<div class="tweet">
+				<div class="chiken"><i class="fab fa-twitter"></i></div>
+				<div class="tweet-info">
+					<p>Cute Online <span class="yellow-text">#Shops</span></p>
+					<p class="days"><span class="yellow-text">6 days ago</span></p>
+				</div>
+			</div>
+
+			<!--Пятый твит-->
+			<div class="tweet">
+				<div class="chiken"><i class="fab fa-twitter"></i></div>
+				<div class="tweet-info">
+					<p>Download 40 vector <span class="yellow-text">#icons</span> package for  <span class="yellow-text">#FREE</span></p>
+					<p class="days-last"><span class="yellow-text">6 days ago</span></p>
+				</div>
+			</div>
+			<!--Ссылки на соц сети-->
+			<div class="social">
+				<h4>Social Connecting</h4>
+				<div class="social-img">
+					<a href="#"><img src="img/facebook.png" alt="facebook"></a>
+					<a href="#"><img src="img/google-plus.png" alt="google-plus"></a>
+					<a href="#"><img src="img/twitter.png" alt="twitter"></a>
+					<a href="#"><img src="img/linkedin.png" alt="linkedin"></a>
+					<a href="#"><img src="img/you-tube.png" alt="you-tube"></a>
+					<a href="#"><img src="img/bloger.png" alt="bloger"></a>
+					<a href="#"><img src="img/rss.png" alt="rss"></a>
+					<a href="#"><img src="img/dribbble.png" alt="dribbble"></a>
+				</div>
+			</div>
+		</div>
+		
+		
+
+		<!--Третья колонка контакты и написаить нам-->
+		<div class="contact-info">
+			<h4>Contact info</h4>
+			<!--Адресс-->
+			<div class="block-info">
+				<div>
+					<img src="img/Adress.png" alt="Adress">
+				</div>
+				<p>Address: 12569 Saint Patrick des Prés,<br> 
+				85000 Paris, France</p>
+			</div>
+
+			<!--Телефон-->
+			<div class="block-info">
+				<div>
+					<img src="img/Phone.png" alt="Phone">
+				</div>
+				<div class="phone">
+					<p>Phone: +38 045 845-45-78</p>
+					<p>+38 045 845-45-79</p>
+				</div>
+			</div>
+
+			<!--емайл-->
+			<div class="block-info">
+				<div>
+					<img src="img/email.png" alt="email">
+				</div>
+				<p>E-mail: <span class="yellow-text">freeforwebdesign@gmail.com</span></p>
+			</div>
+
+
+
+			<div class="follows-info">
+				<h4>Follow Us</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta facere at esse.</p>
+				<div class="buttons">
+					<input type="text" name="follow us">
+					<input type="button" name="send">
+				</div>
+			</div>	
+		</div>
+	</div>
+
+		
+
+		<!--Навигация в подвале-->
+		<div class="nav-footer">
+			<a href="#">HOME</a>
+			<a href="#">PORTFOLIO</a>
+			<a href="#">BLOG</a>
+			<a href="#">ABOUT US</a>
+			<a href="#">CONTACT</a>
+		</div>
+	</footer>
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous">
+  	</script>
+  	<script src="owlcarousel/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js.js"></script>
+</body>
+</html>
