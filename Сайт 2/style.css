@@ -1,0 +1,809 @@
+
+/*Стилизация под смартфон с разрешением 765px и меньше */
+@media screen and (max-width: 765px) {
+
+	/*Блок header стилизация nav меню*/
+	span.toggle{
+		clear: both;
+		display: block;
+		text-align: center;
+		font-size: 18px;
+		line-height: 40px;
+		width: 100%;
+		color: #000;
+		background: #ffcc01;
+		transition: all .1s linear;
+	}
+	span.toggle:hover{
+		background: #d3a900;
+	}
+	#checkbox-menu:checked + label .touch li{
+		opacity: 1;
+		visibility: visible;
+		transition: all .7s linear;
+	}
+	#checkbox-menu:checked + label .touch{
+		height: 350px;
+	}
+	label .menu{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 0;
+		transition: height .3s linear;
+	}
+	label .menu li{
+		display: flex;
+		align-self: center;
+		width: 95%;
+		opacity: 0;
+		visibility: hidden;
+	}
+	label .menu li a{
+		width: 95%;
+		text-align: center;
+		align-self: center;
+		align-content: center;
+	}
+	label .menu li a.logo{
+		font-size: 18px;
+		margin-right: 0px;
+	}
+	label .menu li a.contacts{
+		margin-right: 0px;
+	}
+
+
+
+
+
+	
+/*Секция "intro wrapper"*/
+	section.intro{
+		margin-top: 0;
+		display: block;
+		max-width: 100%;
+	}
+	.intro-img{
+
+	}
+	section.intro .intro-text{
+		position: relative;
+		font-size: 35px;
+		right: -10px;
+		top: 95px;
+	}
+	section.intro .intro-contacts{
+		position: relative;
+		right: 0px;
+		top: -57px;
+		padding: 20px 10px;
+	}
+	section.intro .intro-contacts i{
+		margin-right: 10px;
+	}
+	section.intro .intro-contacts p{
+		font-size: 14px;
+		margin-right: 0;
+	}
+
+
+
+/*Секция "intro wrapper"*/
+	section.stats{
+		margin-top: 0;
+		flex-direction: column;
+	}
+	section.stats .stats-text{
+		padding: 10px;
+	}
+	section.stats .stats-text h2{
+		font-size: 30px;
+		margin-bottom: 10px;
+	}
+	section.stats .stats-text p{
+		margin-top: 5px;
+		font-size: 13px;
+		line-height: 18px;
+	}
+
+
+
+
+
+
+/*Секция "intro wrapper"*/
+	section .cards{
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	grid-row-gap: 20px;
+	justify-items: center;
+}
+	section .apart input[type=text]{
+		width: 130px;
+		margin-top: 20px;
+	}
+	section .buttons-search{
+		flex-direction: column;
+		margin-left: 4%;
+	}
+	section .all{
+		background-color: #fff;
+		margin-top: 10px;
+		margin-left: 0;
+	}
+
+
+	section .steps-container{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	section .steps-text, .steps h2{
+		margin-left: 5%;
+		margin-bottom: 15px;
+	}
+	section .stepblock{
+		margin-bottom: 20px;
+	}
+
+
+	section .serv-container{
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+	section .img-block{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	section .serv-text{
+		width: 100%;
+	}
+	section .header-serv{
+		margin-left: 5%;
+	}
+	
+
+
+
+
+
+	section .agent-cards{
+		flex-direction: column;
+		align-items: center;
+	}
+	section .agent-card{
+		margin-bottom: 30px;
+	}
+	section .agents-info h2{
+		margin-left: 5%;
+	}
+	section .agents-info p{
+		margin-left: 5%;
+	}
+	
+
+
+
+
+	section .add-line{
+		flex-direction: column;
+		align-items: center;
+	}
+	section .add-line h3{
+		font-size: 15px;
+		margin-top: 75px;
+		margin-bottom: 40px;
+		margin-left: 5%;
+	}
+	section .add-line p{
+		margin-left: 5%;
+	}
+	section .loaction{
+		font-size: 15px;
+		padding: 15px 10px 18px 11px;
+	}
+	section .location-melbourn{
+		left: 100px;
+		bottom: 50px;
+	}
+	section .location-australia{
+		left: 100px;
+		bottom: 50px;
+	}
+	section .add-line-right p{
+		margin-right: 0;
+		margin-left: 5%;
+		margin-bottom: 30px;
+	}
+	section .show-more{
+		font-size: 15px;
+		padding: 20px 50px 20px 35px;
+		margin-left: 15%;
+	}
+
+
+
+
+
+	footer .footer-up{
+		flex-direction: column;
+	}
+	footer .footer-links{
+		flex-wrap: wrap;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	footer .footer-logo h3{
+		font-size: 25px;
+		text-align: center;
+	}
+	footer .footer-search input[type=text]{
+		width: 80%;
+		height: 50px;
+		margin-top: 15px;
+	}
+	footer .footer-search{
+		display: flex;
+		justify-content: center;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+body, html{
+	overflow-x: hidden;
+}
+nav{
+	margin: 0 auto;
+	max-width: 1100px;
+	width: 100%;
+}
+#checkbox-menu,
+.toggle{
+	display: none;
+}
+.menu{
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	list-style-type: none; 
+}
+.menu li a{
+	color: #000;
+	text-decoration: none;
+	align-self: center;
+	font-size: 13px;
+	padding: 10px 15px;
+	transition: background .2s linear;
+}
+.menu li a:hover{
+	background: #ffcc01;
+	border-radius: 3px;
+}
+.menu li a.logo{
+	font-size: 25px;
+	margin-right: 240px;
+}
+.menu li a.contacts{
+	margin-right: 100px;
+}
+
+
+
+
+
+
+
+/*Секция intro wrapper*/
+.wrapper{
+	margin: 0 auto;
+	max-width: 1100px;
+	width: 100%;
+}
+.intro{
+	margin-top: 25px;
+	display: flex;
+	justify-content: flex-end;
+}
+.intro-img{
+	background-image: url(img/room.png);
+	width: 965px;
+	height: 640px;
+}
+.intro .intro-text{
+	position: absolute;
+	color: #9a0a06;
+	font-size: 62px;
+	right: 680px;
+	top: 220px;
+}
+.intro-contacts{
+	background-color: #ffcc01;
+	max-width: 590px;
+	position: absolute;
+	right: 217px;
+	top: 636px;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 50px;		
+}
+.intro-contacts i{
+	color: #fff;
+	margin-right: 30px;
+}
+.intro-contacts p {
+	margin-right: 60px;
+}
+
+
+
+
+
+
+
+/*Секция stats wrapper*/
+.stats{
+	display: flex;
+	padding-top: 100px;
+	padding-bottom: 30px;
+}
+.stats-line{
+	display: flex;
+}
+.stats-text{
+	padding: 40px;
+}
+.stats-text h2{
+	font-size: 40px;
+	margin-bottom: 70px;
+}
+.stats-text p{
+	font-size: 13px;
+	margin-top: 50px;
+	line-height: 27px;
+}
+.square{
+	width: 200px;
+	height: 200px;
+	background-color: #f6f5f4;
+	margin: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.stats-square{
+	font-size: 40px;
+	color: #ffcc01;
+	margin-bottom: 15px;
+}
+.square-text{
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+/*Секция apartments*/
+.apartments{
+	background: #f6f5f4;
+	padding: 60px 0;
+}
+.apart h2{
+	margin-bottom: 85px;
+	font-size: 40px;
+}
+.card{
+	max-width: 348px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.card:hover{
+	background: #fafaf9;
+	box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+.cards{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 30px;
+}
+.card-conteiner{
+	padding: 25px;
+}
+.card-info{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 25px;
+}
+.card-info .money{
+	color: #ffcc01;
+	font-size: 18px;
+}
+.card-info .info i{
+	margin-right: 8px;
+}
+.card-info .info span:first-child{
+	margin-right: 18px;
+}
+.apart input[type=text]{
+	margin-top: 50px;
+	width: 300px;
+	height: 70px;
+	border: none;
+	background-image: url(img/search.png);
+	background-repeat: no-repeat;
+	background-position: 27px;
+	outline: none;
+	padding-left: 62px;
+	font-size: 15px;
+	color: #919eb1;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.apart input[type=submit]{
+	width: 115px;
+	height: 70px;
+	border: none;
+	background: #ffcc01;
+	font-size: 15px;
+	margin-left: -4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	cursor: pointer;
+}
+.all{
+	width: 250px;
+	height: 70px;
+	border: none;
+	border-radius: 4px;
+	margin-left: 40px;
+	margin-top: 52px;
+	font-size: 15px;
+	cursor: pointer;
+}
+.buttons-search{
+	display: flex;
+}
+
+
+
+
+
+
+
+
+/*Секция steps*/
+.steps{
+	margin-bottom: 70px;
+}
+.steps h2{
+	margin-top: 55px;
+	font-size: 40px;
+	margin-bottom: 35px;
+}
+.steps-text{
+	line-height: 27px;
+	font-size: 13px;
+}
+.mbtext{
+	margin-bottom: 70px;
+}
+.stepblock{
+	width: 340px;
+	height: 370px;
+	background-color: #fff;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+.stepblock:hover{
+	background: #ffcc01;
+	color: #fff;
+}
+.stepblock .step-num{
+	font-size: 200px;
+	position: relative;
+	top: -100px;
+	left: -30px;
+}
+.steps-container{
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+.stepblock h4{
+	margin-top: -100px;
+	margin-bottom: 20px;
+	margin-left: 40px;
+	font-size: 14px;
+}
+.stepblock h4 span{
+	margin-right: 15px;
+}
+.stepblock .step-info{
+	margin-left: 70px;
+	line-height: 29px;
+}
+.stepblock .stepinfolast{
+	display: inline-block;
+	margin-left: 70px;
+	margin-top: 20px;
+	border-bottom: 3px solid #222222;
+}
+.strong{
+	margin: 0 auto;
+	padding: 10px;
+	background: #ffcc01;
+	width: 300px;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 4px;
+	color: #fff;
+}
+.strong:hover{
+	background: #fff;
+	color: rgba(0,0,0);
+}
+
+
+
+
+
+
+
+
+/*Секция steps*/
+.serv-container{
+	display: flex;
+	margin-top: 70px;
+}
+.services img{
+	width: 100%;
+	height: auto;
+}
+.img-block{
+	width: 58%;
+}
+.serv-text{
+	width: 42%;
+	margin-left: 3%;
+}
+.serv-text p{
+	margin-bottom: 60px;
+}
+.services h2{
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+.services p{
+	font-size: 13px;
+	line-height: 30px;
+}
+.serv-text h4{
+	font-size: 25px;
+	margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+/*Секция agents*/
+.agents{
+	background-color: #f6f5f4;
+	padding-top: 60px;
+	margin-top: 30px;
+}
+.agents h2{
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+.agents p{
+	font-size: 13px;
+	line-height: 30px;
+}
+.agents p:nth-child(3){
+	margin-bottom: 60px;
+}
+.under-str-agent{
+	display: flex;
+	justify-content: space-between;
+}
+.social i{
+	margin-right: 32px;
+	position: relative;
+	top: 7px;
+	color: #000; 
+}
+.social i:hover{
+	color: #ffcc01;
+	cursor: pointer;
+}
+.social i:last-child{
+	margin-right: 18px; 
+}
+.agent-card{
+	max-width: 344px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0 ,0, 0.5);
+}
+.agent-card:hover{
+	box-shadow: 0 0 10px rgba(0, 0 ,0, 0.8);	
+}
+.agent-info{
+	padding-top: 10px;
+	padding-left: 25px;
+}
+.name-agent{
+	color: #ffcc01;
+}
+.agent-cards{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 95px;
+}
+
+
+
+
+
+
+
+
+
+/*Секция add*/
+.add{
+	padding-bottom: 100px;
+	padding-top: 90px;
+}
+.add-line{
+	display: flex;
+}
+.location{
+	font-size: 18px;
+	padding: 30px 87px 35px 55px;
+	background: #ffcc01;
+	display: inline-block;
+}
+.location i{
+	font-size: 25px;
+	margin-right: 30px;
+	position: relative;
+	top: 7px;
+	color: #fff;
+}
+.location-melbourn{
+	position: relative;
+	left: 100px;
+	bottom: 50px;
+}
+.location-australia{
+	position: relative;
+	left: 260px;
+	bottom: 50px;
+}
+.line-text h3{
+	font-size: 25px;
+	margin-top: 75px;
+	margin-bottom: 40px;
+	margin-left: 130px;
+}
+.line-text p{
+	font-size: 13px;
+	line-height: 30px;
+	margin-left: 130px;
+
+}
+.add-line-right p{
+	margin-left: 0;
+	margin-right: 130px;
+
+}
+.line-text h3:last-of-type{
+	margin-top: 25px;
+}
+.show-more{
+	background-color: #1f373d;
+	color: #fff;
+	padding: 30px 70px 30px 55px;
+	display: inline-block;
+	margin-left: 130px;
+	margin-top: 60px;
+	cursor: pointer; 
+}
+
+
+
+
+
+
+
+/*Подвал*/
+footer{
+	background-color: #1f373d;
+	color: white;
+	padding-top: 50px;
+	padding-bottom: 80px;
+}
+/*Первый ярус подвала*/
+.footer-up{
+	display: flex;
+	justify-content: space-between;
+}
+.footer-logo h3{
+	font-size: 40px;
+}
+.footer-search input[type=text]{
+	width: 402px;
+	padding-left: 40px;
+	height: 70px;
+	color: #919eb1;
+	padding-left: 27px
+	font-size: 15px;
+	background-image: url(img/strelka.png);
+	background-repeat: no-repeat;
+	background-position: 94%;
+}
+/*Второй ярус подвала*/
+hr{
+	opacity: 0.3;
+	margin-top: 47px;
+	margin-bottom: 70px;
+}
+.footer-links{
+	display: flex;
+	justify-content: space-between;
+	padding-right: 90px;
+}
+.footer-link{
+	display: flex;
+	flex-direction: column;
+}
+.footer-link p{
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #919eb1;
+	margin-bottom: 35px;
+}
+.footer-link a{
+	color: #fff;
+	font-size: 13px;
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+.footer-link a:hover{
+	opacity: 0.4;
+}
+.footer-links-logo{
+	font-size: 25px;
+	margin-right: 26%;
+}
