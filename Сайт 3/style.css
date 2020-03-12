@@ -1,0 +1,573 @@
+body{
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+ul{
+	display: flex;
+}
+a{
+	text-decoration: none;
+}
+header{
+	background-color: #f6f6f6;
+	padding-top: 22px;
+	padding-bottom: 22px;
+}
+
+/* Секция header-container*/
+.header-container{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-container a{
+	color: #000000;
+	font-size: 16px;
+	padding: 27px 10px;
+	margin-right: 60px;
+}
+.header-container a:hover{
+	background-color: #ffea00;
+}
+#menu-checkbox{
+	display: none;
+}
+
+
+
+
+
+
+
+/* Секция top-slide*/
+.top-slide{
+	background-image: url(img/top-slide.png);
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+.block-slide{
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 123px;
+	padding-bottom: 300px;
+}
+.block-slide h2{
+	background-color: #ffea00;
+	font-size: 50px;
+	text-transform: uppercase;
+	display: inline;
+	padding: 0 13px;
+}
+.block-slide :nth-child(2){
+	padding-bottom: 14px;
+}
+.block-slide p{
+	color: #fff;
+	background-color: #414146;
+	display: inline;
+	font-size: 24px;
+}
+
+
+
+
+
+
+
+/* Секция main-slide*/
+.wrapper{
+	width: 80%;
+	margin: 0 auto;
+}
+.main-slide{
+	background-color: #f6f6f6;
+	padding-top: 90px;
+	padding-bottom: 99px;
+}
+.slides{
+	display: flex;
+	justify-content: space-between;
+}
+.block-img{
+	background-color: #ffea00;
+	width: 250px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.slide img{
+	margin-bottom: 37px;
+	margin-top: 40px;
+}
+.block-img p{
+	font-size: 16px;
+	margin-bottom: 13px;
+	text-transform: uppercase;
+}
+.text-slide{
+	width: 250px;
+	height: 85px;
+	color: #fff;
+	background-color: #414146;
+}
+.slide-f{
+	display: flex;
+	flex-direction: column;
+}
+.slide-f img{
+	height: 200px;
+}
+.text-slide {
+	font-size: 13px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+.text-slide:hover{
+	font-size: 18px;
+}
+.slide-first p{
+	justify-content: center;
+}
+.text{
+	color: #424147;
+	text-align: center;
+	margin-bottom: 60px;
+}
+.text h3{
+	font-size: 35px;
+	margin-bottom: 28px;
+	text-transform: uppercase;
+}
+.text p{
+	font-size: 24px;
+}
+
+
+
+
+
+
+
+
+/* Секция portfolio*/
+.portfolio{
+	text-align: center;
+	background-color: #f6f6f6;
+	padding-bottom: 36px;
+}
+.portfolio h4{
+	color: #ffea00;
+	background-color: #424147;
+	display: inline;
+	padding: 9px 30px;
+	font-size: 18px;
+}
+.portfolio p{
+	font-size: 16px;
+	margin-top: 33px;
+	margin-bottom: 25px;
+	color: #424146;
+}
+.toggles button{
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #424146;
+	border: none;
+	cursor: pointer;
+	background-color: #f6f6f6;
+}
+.toggles button:hover{
+	color: #000;
+	font-size: 17px;
+}
+.toggles button:after{
+	content: " / ";
+}
+.toggles button:last-child:after{
+	content: "";
+}
+.posts{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 35px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+}
+
+
+
+
+
+
+
+
+
+/* Секция clients-slide*/
+.clients-slide{
+	padding-bottom: 120px;
+	background-color: #f6f6f6;
+	text-align: center;
+}
+.clients-slide h4{
+	color: #ffea00;
+	background-color: #424147;
+	display: inline;
+	padding: 8px 23px;
+	font-size: 18px;
+}
+.clients-slide p{
+	font-size: 16px;
+	margin-top: 33px;
+	margin-bottom: 40px;
+	color: #424146;
+}
+
+
+
+
+
+
+/* Секция footer*/
+footer{
+	background-color: #414146;
+	color: #f5f5f6;
+	padding-top: 30px;
+}
+.main-footer{
+	width: 84%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 30px; 
+}
+
+
+
+
+
+
+
+
+
+
+/* Блок about-us*/
+.about-us{
+	width: 33%;
+}
+.about-us h4{
+	font-size: 18px;
+	margin-bottom: 33px;
+}
+.about-us p{
+	font-size: 13px;
+	margin-bottom: 33px;
+	width: 411px;
+}
+.botton-learn button{
+	background-color: #000;
+	padding: 13px 19px;
+	color: #fff;
+	font-size: 15px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 4px solid #ffea00;
+	cursor: pointer;
+	margin-bottom: 44px; 
+}
+/*.botton-learn button:hover{
+	font-size: 16px;
+}*/
+
+/* Блок tweets*/
+.tweets{
+	width: 33%;
+	padding-left: 100px;
+}
+.tweet{
+	display: flex;
+}
+.chiken i{
+	margin-right: 20px;
+}
+.tweets h4{
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+.yellow-text{
+	color: #ffea00;
+}
+.tweet-info p{
+	font-size: 13px;
+	margin-bottom: 30px;
+	margin-top: 0;
+}
+.tweet-info .days{
+	font-size: 8px;
+	margin-bottom: 15px;
+}
+.tweet-info .days-last{
+	font-size: 8px;
+	margin-bottom: 39px;
+}
+.social{
+	display: flex;
+}
+.social h4{
+	margin-right: 8px;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+/* Блок contact-info*/
+.contact-info{
+	width: 33%;
+	padding-left: 120px;
+}
+.contact-info h4{
+	font-size: 18px;
+	margin-bottom: 50px;
+}
+.contact-info p{
+	font-size: 13px;
+}
+.block-info{
+	display: flex;
+	margin-bottom: 20px;
+}
+.contact-info :nth-child(3){
+	margin-bottom: 25px;
+}
+.contact-info :nth-child(4){
+	margin-bottom: 48px;
+}
+.phone{
+	display: flex;
+	flex-direction: column;
+}
+.block-info img{
+	margin-right: 16px;
+	position: relative;
+	top: -5px;
+}
+.follows-info h4{
+	margin-bottom: 21px;
+	font-size: 18px;
+}
+.follows-info p{
+	width: 320px;
+	margin-bottom: 25px;
+}
+.buttons input[type=text]{
+	width: 230px;
+	height: 25px;
+	background-color: #414146;
+	border: none;
+	border-bottom: 2px solid #ffea00;
+	color: #fff;
+}
+.buttons input[type=button]{
+	width: 28px;
+	height: 28px;
+	background-image: url(img/email_button.png);
+	border: none;
+	position: relative;
+	top: 9px;
+	right: 3px;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/* Блок nav-footer*/
+.nav-footer{
+	background-color: #000;
+	height: 70px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.nav-footer a{
+	margin-right: 80px;
+	color: #fff;
+}
+.nav-footer a:hover{
+	border-bottom: 2px solid #ffea00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 420px) {
+	/*Блок header*/
+	.header-container{
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.main-menu{
+		display: none;
+	}
+	.main-menu li{
+		width: 100%;
+		display: block;
+		font-size: 12px;
+	}
+	.main-menu a{
+		display: block;
+		padding: 8px;
+	}
+	.toggle-button{
+		text-align: center;
+		display: block;
+		cursor: pointer;
+		color: #000;
+	}
+	.toggle-button:after{
+		content: attr(data-open);
+		display: block;
+	}
+	#menu-checkbox:checked +  nav[role="navigation"] .main-menu{
+		display: block;
+	}
+	#menu-checkbox:checked +  nav[role="navigation"] .toggle-button:after{
+		content: attr(data-close);
+	}
+	.header-container a{
+		margin-right: -65px;
+	}
+	.main-menu{
+		position: relative;
+		top: 20px;
+		right: 115px;
+	}
+
+
+
+
+	/* Секция main-slide*/
+	.slides{
+		flex-direction: column;
+		align-items: center;
+	}
+	.slide{
+		margin-bottom: 20px;
+	}
+	.slide-first{
+		margin-bottom: 20px;
+	}
+
+
+	/* Секция portfolio*/
+	.posts{
+		display: grid;
+		grid-template-columns: auto;
+	}
+
+
+	/* Секция footer*/
+	.main-footer{
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 20px; 
+	}
+
+	/* Блок about-us*/
+	.about-us p{
+		font-size: 13px;
+		margin-bottom: 22px;
+		width: 350px;
+	}
+	.botton-learn button{
+		background-color: #000;
+		padding: 9px 15px;
+		color: #fff;
+		font-size: 15px;
+		border: none;
+		border-bottom: 4px solid #ffea00;
+		cursor: pointer;
+		margin-bottom: 44px;
+	}
+	.photos{
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+	.photos img{
+		margin-right: 10px;
+		margin-bottom: 10px;
+		border-radius: 4px;
+	}
+
+
+	/* Блок tweets*/
+	.tweets{
+		width: 100%;
+		padding-left: 0px;
+	}
+	.social-img{
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+	}
+	.social-img img{
+		margin-right: 3px;
+
+	}
+
+
+
+	/* Блок contact-info*/
+	.contact-info{
+		width: 100%;
+		padding-left: 0px;
+		margin-top: 40px;
+	}
+
+
+
+	/* Блок nav-footer*/
+	.nav-footer a{
+		margin-right: 20px;
+		color: #fff;
+		font-size: 13px;
+	}
+}
