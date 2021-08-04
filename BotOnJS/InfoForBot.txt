@@ -1,0 +1,4 @@
+npm run dw - запуск
+1857248953:AAGLOLnV0A29bGlv3HoVUsrc5_aiYcHP6yQ - токен
+BTIpracticeAP - name
+BTIpracticeAPBot - userName
