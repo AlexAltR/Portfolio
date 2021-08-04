@@ -1,0 +1,1630 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+/*Cтили для "header"*/
+header{
+	width: 100%;
+	background-color: #f2b400;
+	position: sticky;
+	top: 0;
+	z-index: 5;
+}
+.header-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 65px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+
+
+
+
+
+/*Общие стили для хлебных крошек*/
+.crumbs{
+	display: flex;
+	flex: 0 0 22.92%;
+}
+.crumbs a{
+	margin-right: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 12px;
+	background-color: #d2830b;
+	position: relative;
+}
+.crumbs a p{
+	text-align: center;
+	text-decoration: underline;
+}
+
+/*Cтили для ссылки "Главная" в хлебных крошках*/
+.main-link{
+	height: 40px;
+	width: 22.73%;
+	min-width: 30%;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+.main-link p{
+	margin-left: 10px;
+}
+.main-link:hover{
+	background-color: #fff;
+	color: #d2830b;
+}
+.main-link::after{
+	content: "";
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #d2830b;
+    border-right: 27px solid transparent;
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    z-index: 5;
+}
+.main-link:hover::after{
+	border-left: 20px solid #fff;
+}
+
+
+
+
+/*Cтили для ссылки "ЦДБ" в хлебных крошках*/
+.normal-link{
+	height: 40px;
+	flex: 0 0 54.55%;
+}
+.normal-link p{
+	margin-left: 15px;
+}
+.normal-link:hover{
+	background-color: #fff;
+	color: #d2830b;
+}
+.normal-link::before{
+	content: "";
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #f2b400;
+    position: absolute;
+    left: 0%;
+    top: 0;
+}
+.normal-link::after{
+	content: "";
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #d2830b;
+    border-right: 27px solid transparent;
+    position: absolute;
+    right: -47px;
+    top: 0;
+    z-index: 1;
+}
+.normal-link:hover::after{
+	border-left: 20px solid #fff;
+}
+
+
+/*Cтили для блока "center-text"*/
+.center-text{
+	color: #fff;
+	margin-left: 120px;
+	display: block;
+	text-align: center;
+	width: 235px;
+	height: 19px;
+}
+.center-text p{
+	white-space: nowrap;
+	font-size: 14px;
+}
+
+
+/*Cтили для блока "block-nav"*/
+.block-nav{
+	display: flex;
+	justify-content: flex-start;
+	width: 550px;
+	margin-right: 20px;
+}
+
+
+
+
+/*Cтили для блока "nav"*/
+nav{
+	display: flex;
+	width: 90%;
+	position: relative;
+	right: 0;
+}
+.navigation__menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+.link-header{
+	border-radius: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 5px;
+}
+
+.link-header:hover{
+	background-color: #fff;
+}
+.link-header a{
+	display: flex;
+	text-decoration: none;
+	color: #000;
+	font-size: 15px;
+	padding: 8px;
+}
+
+.link-header i{
+	color: #d1820b;
+	font-size: 16px;
+	margin-right: 4px;
+}
+.icon{
+	width: 16px;
+	height: 16px;
+}
+
+
+
+/*Cтили для блока-кнопки для меню бургера "navigation__btn"*/
+.navigation__btn {
+    display: none;
+    position: relative;
+    right: 0;
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 15px;
+    color: #fff;
+}
+
+
+/*Медиа запросы для меню-бургера*/
+@media (max-width: 1435px) {
+	body{
+		overflow-x: scroll;
+	}
+
+
+
+	#block-logo {
+	margin: 0 auto;
+	height: 470px;
+	position: relative;
+	
+	}
+
+	#logo {
+	position: absolute;
+	min-width: 10%;
+	height: 470px;
+	left: 50%;
+	top: 50%;
+	margin-left: -336px;
+	margin-top: -135px;
+	}
+
+	
+
+
+
+
+
+
+
+	.navigation__menu{
+		display: none;
+	}
+	.navigation__btn {
+    display: block;
+}
+	.block-nav{
+		display: flex;
+		justify-content: flex-end;
+		margin-right: 15px;
+		width: 280px;
+		transition: all 0.3s;
+	}
+	nav{
+		display: flex;
+		justify-content: flex-end;
+		margin-right: -15px;
+	}
+
+	.navigation__menu {
+	    overflow: hidden;
+	    position: absolute;
+	    top: 159%;
+	    right: 2.5%;
+	    background-color: #f2b400;
+	    transition: opacity .3s, height .3s;
+	}	
+	.navigation__menu.active{
+		display: flex;
+		flex-direction: column;
+		display: block;
+		border-bottom-right-radius: 8px;
+		border-bottom-left-radius: 8px;
+		z-index: 2;
+		height: 225px;
+	}
+	
+
+
+
+	body > header > div > div.block-nav > nav > ul > li:nth-child(1){
+		margin-top: 25px;
+	}
+
+	.navigation__menu.active a{
+		width: 142px;
+	}	
+
+	.navigation__menu.active a.icon{
+		display: flex;
+		justify-content: center;
+	}
+	.link-header{
+		margin-left: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Общие стили для "main"*/
+main h2{
+	font-size: 36px;
+	color: #fff;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+
+}
+.wrapper{
+	width: 45%;
+	margin: 0 auto;
+}
+
+.wrapper-slider{
+	width: 30%;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+/*Стили для секции "background"*/
+
+#background{
+	width: 100%;
+	height: 965px; 
+	position: absolute;
+	background: #787777;
+	top: 0px;
+	z-index: 1;
+	opacity: 0;
+	backdrop-filter: blur(8px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Стили для основной картинки "logo"*/
+#block-logo{
+	max-width: 100%;
+	min-width: 10%;
+	margin: 0 auto;
+	height: 739px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+}
+.img-from-logo img{
+	height: 600px;
+	opacity: 0.9;
+	
+}
+#logo{
+	position: absolute;
+	height: 470px;
+	left: 50%;
+	top: 50%;
+	margin-left: -475px;
+	margin-top: -195px;
+}
+
+.logotip{
+	max-width: 100%;
+	min-width: 10%;
+}
+
+/*Стили для блондинки*/
+/*Стили для ГОЛОВЫ БЛОНДИНКИ*/
+#head-blond{
+	position: absolute;
+	bottom: 27%;
+	left: 10%;
+	transform-origin: 50% 100%;
+	z-index: 1; 
+}
+
+
+/*Стили для ТЕЛА БЛОНДИНКИ*/
+#body-blond{
+	position: absolute;
+	bottom: -5%;
+	left: 10.6%;
+	opacity: 1;
+	z-index: 1;
+}
+
+
+
+
+/*Стили для РЫЖЕЙ ДЕВОЧКИ С ГОЛУБЫМ ПОРТФЕЛЕМ*/
+/*Стили для ТЕЛА*/
+#orange-girl-blue-bag{
+	position: absolute;
+	bottom: 61%;
+	left: 38%;
+	z-index: 1;
+}
+
+/*Стили для РУКИ*/
+#arm-orange-girl-blue-bag{
+	position: absolute;
+	bottom: 73%;
+	left: 34.6%;
+	transform-origin: 100% 75%;	
+	z-index: 1;
+}
+
+
+
+/*Стили для РЫЖЕЙ ДЕВОЧКИ С РОЗОВЫМ ПОРТФЕЛЕМ*/
+/*Стили для ТЕЛА*/
+#orange-girl-pink-bag{
+	position: absolute;
+	bottom: 56.6%;
+	left: 61%;
+	z-index: 1;
+}
+
+/*Стили для РУКИ*/
+#arm-orange-girl-pink-bag{
+	position: absolute;
+	bottom: 59%;
+	left: 72.4%;	
+	transform-origin: 0% 75%;
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
+/*Стили для МАЛЬЧИКА С ЛУПОЙ*/
+/*Стили для ТЕЛА*/
+#body-boy-lupa{
+	position: absolute;
+	bottom: -3%;
+	left: 79%;
+	z-index: 1;
+}
+
+/*Стили для ГОЛОВЫ*/
+#head-boy-lupa{
+	position: absolute;
+	bottom: 26.5%;
+	left: 79.3%;
+	transform-origin: 50% 100%;	
+	z-index: 1;
+}
+/*Стили для ЛУПЫ*/
+#lupa-boy{
+	position: absolute;
+	bottom: 10.4%;
+	left: 72.4%;
+	transform-origin: 100% 75%;
+	z-index: 1;
+}
+
+
+
+
+
+/*Далее идут стили для Текстов-подсказок*/
+/*Текст-подсказка РАССКАЖУ-ТЕБЕ-О-НОВЫХ-СОБЫТИЯХ*/
+#podskazka1{
+	position: absolute;
+	top: 16%;
+	left: -12%;
+	z-index: 3;
+	opacity: 0;
+}
+#podskazka1-link{
+	visibility: hidden;
+}
+
+/*Текст-подсказка РАССКАЖУ-ТЕБЕ-О-КОНКУРСАХ-И-АКЦИЯХ*/
+#podskazka2{
+	position: absolute;
+	top: -31%;
+	left: 15%;
+	z-index: 3;
+	opacity: 0;
+}
+#podskazka2-link{
+	visibility: hidden;
+}
+/*Текст-подсказка ПОКАЖУ-ТВОРЧЕСТВО-ТВОИХ-ДРУЗЕЙ*/
+#podskazka3{
+	position: absolute;
+	top: -18%;
+	left: 73%;
+	z-index: 3;
+	opacity: 0;
+}
+#podskazka3-link{
+	/*visibility: hidden;*/
+}
+/*Текст-подсказка НОВЫЕ-КНИГИ-У-МЕНЯ*/
+#podskazka4{
+	position: absolute;
+	top: 20%;
+	left: 89%;
+	z-index: 3;
+	opacity: 0;
+}
+#podskazka4-link{
+	visibility: hidden;
+}
+
+
+
+
+
+
+
+/*Секция "title-site" с картинкой названия библиотеки*/
+.img-title-site{
+	height: 160px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	text-align: center;
+	line-height: 1.5;
+}
+.img-title-site p{
+	max-width: 100%;
+	min-width: 10%;
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 0.04em;
+	word-spacing: 0.1em;
+}
+
+
+
+
+
+
+
+/*Секция "news"*/
+/*Блок с заголовком к секции "news"*/
+.news{
+	width: 100%;
+}
+.title-h4{
+	background-color: #f2b400;
+	height: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*Блок с новостными блоками*/
+.news-blocks{
+	height: 760px;
+	background-color: #17b0dc;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+/*Новостной блок*/
+.new-block{
+	height: 300px;
+	width: 640px;
+	background-color: #fff;
+	border: 2px solid #000;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+}
+/*Картинка новостного блока*/
+.img-new-block img{
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+/*Блок с текстовым контентом новостного блока*/
+.news-content{
+	margin: 15px 15px;
+}
+.title-new-text-and-data{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+.title-new-text{
+	font-size: 18px;
+}
+.data{
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+}
+.text-news{
+	font-size: 16px;
+	margin-bottom: 10px;
+	w
+}
+.link-more-news{
+	text-align: right;
+}
+.link-more-news a{
+	color: #fe0000;
+	font-size: 15px;
+	font-weight: bold;
+}
+.link-more-news a:hover{
+	font-size: 16px;
+	transition: font-size 0.3s;
+}
+.link-more-news a:not(:hover){
+	font-size: 15px;
+	transition: font-size 0.3s;
+}
+
+
+
+
+
+
+
+
+/*Секция "history"*/
+.history{
+	width: 100%;
+	background-color: #17b0dc;
+
+}
+.block-text-content{
+	display: flex;
+	justify-content: center;
+}
+.text-content{
+	height: 230px;
+	width: 1000px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 45px;
+}
+.text-history{
+	height: 190px;
+}
+.text{
+	margin: 10px 0px;
+	font-size: 18px;
+	text-align: left;
+	color: #fff;
+}
+
+
+
+
+
+/*Секция "block-slider"*/
+
+.block-slider{
+	width: 100%;
+	background-color: #17b0dc;
+	height: 690px;
+}
+
+
+/* Размещение слайдов в слайдере */
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+
+.slick-list{
+	overflow: hidden;
+}
+
+.slider{
+	position: relative;
+	width: 690px;
+}
+
+/* Картинка слайда */
+.slider-item{
+	outline: 0;
+}
+
+/* Обе стрелки */
+.slider .slick-arrow{
+	position: absolute;
+	top: 44%;
+	z-index: 10;
+	font-size: 0;
+	height: 50px;
+	width: 25px;
+	border: none;
+	color: #fff;
+	outline: 0;
+	margin: 0px 10px;
+	cursor: pointer;
+}
+
+
+/* Левая стрелка */
+.slider .slick-arrow.slick-prev{
+	left: 0;
+	background: url(/bitrix/templates/shuk_det/img/sl-arrow_l.svg) 0 0 / 100% no-repeat;
+}
+
+/* Правая стрелка */
+.slider .slick-arrow.slick-next{
+	right: 0;
+	background: url(/bitrix/templates/shuk_det/img/sl-arrow_r.svg) 0 0 / 100% no-repeat;
+}
+
+/* Точки */
+
+.slider .slick-dots{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.slider .slick-dots li{
+	list-style: none;
+	margin: 14px 10px;
+
+}
+
+.slider .slick-dots li.slick-active button{ 
+	background-color: transparent; 
+	border: 2px solid #fff;
+}
+
+
+.slider .slick-dots button{
+	font-size: 0;
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+}
+
+.slider .slick-dots button:focus{
+	outline: 0;
+}
+/* !!!!!!!!!!!!!!!!!!! */
+/*Код для слайдера V2*/
+
+.carousel-3d-container figure {
+  margin: 0;
+}
+
+.carousel-3d-container figcaption {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  bottom: 0;
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  font-size: 12px;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+#example{
+	height: 550px;
+	display: flex;
+	align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Секция "may"*/
+.may{
+	width: 100%;
+	background-color: #17b0dc;
+}
+
+
+
+
+
+/*footer*/
+footer{
+	width: 100%;
+	background-color: #f2b400;
+	color: #fff;
+
+}
+.footer-content{
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+ 	align-items: center;
+}
+.footer-content h3{
+	font-size: 36px;
+	font-weight: normal;
+}
+.text-footer{
+	font-size: 28px;
+}
+.icon-footer{
+	width: 200px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+}
+.icon-footer i{
+	font-size: 28px;
+	margin-right: 15px;
+	color: #000;
+}
+.icon-footer i:hover{
+	color: #fff;
+	transition: color .3s;
+}
+.icon-footer i:not(:hover){
+	color: #000;
+	transition: color .3s;
+}
+.img-link-footer a{
+	margin-right: 15px;
+}
+.firma a{
+	text-decoration: none;
+	color: #000;
+}
+
+
+
+
+
+
+@media (min-width: 1921px) and (max-width:2560px){
+	
+	#background{
+	width: 100%;
+	height: 965px;
+	position: absolute;
+	background: #787777;
+	top: 0px;
+	z-index: 1;
+	opacity: 0;
+	backdrop-filter: blur(8px);
+}
+
+
+
+/*Стили для основной картинки "logo"*/
+#block-logo{
+	max-width: 100%;
+	min-width: 10%;
+	margin: 0 auto;
+	height: 739px;
+	position: relative;
+	
+}
+.img-from-logo img{
+	height: 650px;
+	width: 700px;
+	
+}
+#logo{
+	position: absolute;
+	height: 470px;
+	left: 50%;
+	top: 48%;
+	margin-left: -476px;
+	margin-top: -195px;
+}
+
+.logotip{
+	max-width: 100%;
+	min-width: 10%;
+	width: 930px;
+	height: 540px;
+}
+
+/*Стили для блондинки*/
+/*Стили для ГОЛОВЫ БЛОНДИНКИ*/
+#head-blond{
+	position: absolute;
+	bottom: 26%;
+	left: 10%;
+	transform-origin: 50% 100%;
+	z-index: 1; 
+}
+#head-blond img{
+	width: 110%;
+}
+
+/*Стили для ТЕЛА БЛОНДИНКИ*/
+#body-blond{
+	position: absolute;
+	bottom: -9%;
+	left: 10.6%;
+	opacity: 1;
+	z-index: 1;
+}
+#body-blond img{
+	width: 110%;
+}
+
+
+
+/*Стили для РЫЖЕЙ ДЕВОЧКИ С ГОЛУБЫМ ПОРТФЕЛЕМ*/
+/*Стили для ТЕЛА*/
+#orange-girl-blue-bag{
+	position: absolute;
+	bottom: 58.5%;
+	left: 38%;
+	z-index: 1;
+}
+#orange-girl-blue-bag img{
+	width: 110%;
+}
+
+/*Стили для РУКИ*/
+#arm-orange-girl-blue-bag{
+	position: absolute;
+	bottom: 71%;
+	left: 34.4%;
+	transform-origin: 100% 75%;	
+	z-index: 1;
+}
+#arm-orange-girl-blue-bag img{
+	width: 110%;
+}
+
+
+/*Стили для РЫЖЕЙ ДЕВОЧКИ С РОЗОВЫМ ПОРТФЕЛЕМ*/
+/*Стили для ТЕЛА*/
+#orange-girl-pink-bag{
+	position: absolute;
+	bottom: 54%;
+	left: 61%;
+	z-index: 1;
+}
+#orange-girl-pink-bag img{
+	width: 110%;
+}
+
+/*Стили для РУКИ*/
+#arm-orange-girl-pink-bag{
+	position: absolute;
+	bottom: 56.5%;
+	left: 73.5%;	
+	transform-origin: 0% 75%;
+	z-index: 1;
+}
+#arm-orange-girl-pink-bag img{
+	width: 110%;
+}
+
+
+
+
+
+
+
+
+/*Стили для МАЛЬЧИКА С ЛУПОЙ*/
+/*Стили для ТЕЛА*/
+#body-boy-lupa{
+	position: absolute;
+	bottom: -8%;
+	left: 78%;
+	z-index: 1;
+}
+#body-boy-lupa img{
+	width: 110%;
+}
+
+/*Стили для ГОЛОВЫ*/
+#head-boy-lupa{
+	position: absolute;
+	bottom: 24.5%;
+	left: 78.5%;
+	transform-origin: 50% 100%;	
+	z-index: 1;
+}
+#head-boy-lupa img{
+	width: 110%;
+}
+
+/*Стили для ЛУПЫ*/
+#lupa-boy{
+	position: absolute;
+	bottom: 7%;
+	left: 70.5%;
+	transform-origin: 100% 75%;
+	z-index: 1;
+}
+#lupa-boy img{
+	width: 110%;
+}
+
+
+
+
+
+/*Далее идут стили для Текстов-подсказок*/
+/*Текст-подсказка РАССКАЖУ-ТЕБЕ-О-НОВЫХ-СОБЫТИЯХ*/
+#podskazka1{
+	position: absolute;
+	top: 10.5%;
+	left: -14.5%;
+	z-index: 1;
+}
+#podskazka1 img{
+	width: 110%;
+}
+
+/*Текст-подсказка РАССКАЖУ-ТЕБЕ-О-КОНКУРСАХ-И-АКЦИЯХ*/
+#podskazka2{
+	position: absolute;
+	top: -32%;
+	left: 12.5%;
+	z-index: 1;
+}
+#podskazka2 img{
+	width: 110%;
+}
+
+/*Текст-подсказка ПОКАЖУ-ТВОРЧЕСТВО-ТВОИХ-ДРУЗЕЙ*/
+#podskazka3{
+	position: absolute;
+	top: -20%;
+	left: 75%;
+	z-index: 1;
+}
+#podskazka3 img{
+	width: 125%;
+}
+
+/*Текст-подсказка НОВЫЕ-КНИГИ-У-МЕНЯ*/
+#podskazka4{
+	position: absolute;
+	top: 16%;
+	left: 89%;
+	z-index: 1;
+}
+#podskazka4 img{
+	width: 280%;
+}
+
+
+	
+}
+
+
+
+
+@media (max-width:1436px) and (min-width:0px){
+	
+	.img-title-site p{
+		font-size: 34px;
+	}
+	.img-title-site{
+		height: 145px;
+}
+	/*Стили для основной картинки "logo"*/
+	#block-logo{
+		height: 739px;
+	}
+	#logo{
+		position: absolute;
+		height: 470px;
+		left: 50%;
+		top: 50%;
+		margin-left: -485px;
+		margin-top: -195px;
+	}
+	
+	#background{
+		height: 933px;
+		top: 0px;
+	}
+	.logotip{
+		width: 950px;
+		max-width: 950px;
+		min-width: 950px;
+	}
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-device-width:1441px), (max-width:1441px){
+	.img-title-site p{
+		font-size: 34px;
+	}
+	.img-title-site{
+		height: 145px;
+}
+	/*Стили для основной картинки "logo"*/
+	#block-logo{
+		height: 675px;
+		overflow-x: visible;
+	}
+	#logo{
+		position: absolute;
+		height: 470px;
+		left: 50%;
+		top: 50%;
+		margin-left: -485px;
+		margin-top: -195px;
+	}
+	.img-from-logo img{
+		height: 500px;
+		
+		
+	}
+	#background{
+		height: 886px;
+		top: 0px;
+	}
+	.logotip{
+		max-width: 100%;
+		min-width: 10%;
+	}
+
+}
+
+
+@media only screen and (max-width:1250px){
+	.img-from-logo img{
+		height: 400px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-device-width:1025px), (max-width:1025px){
+	.img-title-site p{
+		font-size: 34px;
+	}
+	.img-title-site{
+		height: 145px;
+}
+	#background{
+		height: 716px;
+		top: 0px;
+	}	
+
+	#block-logo {
+		height: 506px;
+		max-width: 100%;
+		min-width: 10%;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	#logo {
+		position: absolute;
+		max-width: 65%;
+		min-width: 65%;
+		height: 470px;
+		left: 50%;
+		top: 50%;
+		margin-left: -336px;
+		margin-top: -135px;
+	}
+	.img-from-logo img{
+		height: 400px;
+	}
+	.logotip{
+		width: 665px;
+		max-width: 100%;
+		min-width: 100%;
+	}
+	/*Стили для блондинки*/
+	/*Стили для ГОЛОВЫ БЛОНДИНКИ*/
+	#head-blond{
+		position: absolute;
+		bottom: 48%;
+		left: 10%;
+		transform-origin: 50% 100%;
+		z-index: 1; 
+	}
+	#head-blond img{
+		width: 110px;
+	}
+
+
+	/*Стили для ТЕЛА БЛОНДИНКИ*/
+	#body-blond{
+		position: absolute;
+		bottom: 25%;
+		left: 10.9%;
+		opacity: 1;
+		z-index: 1;
+	}
+	#body-blond img{
+		width: 120px;
+	}
+
+
+
+	/*Стили для РЫЖЕЙ ДЕВОЧКИ С ГОЛУБЫМ ПОРТФЕЛЕМ*/
+	/*Стили для ТЕЛА*/
+	#orange-girl-blue-bag{
+		position: absolute;
+		bottom: 72.5%;
+		left: 38%;
+		z-index: 1;
+	}
+	#orange-girl-blue-bag img{
+		width: 120px;
+	}
+
+	/*Стили для РУКИ*/
+	#arm-orange-girl-blue-bag{
+		position: absolute;
+		bottom: 81.7%;
+		left: 34.7%;
+		transform-origin: 100% 75%;	
+		z-index: 1;
+	}
+	#arm-orange-girl-blue-bag img{
+		width: 40px;
+	}
+
+
+
+	/*Стили для РЫЖЕЙ ДЕВОЧКИ С РОЗОВЫМ ПОРТФЕЛЕМ*/
+	/*Стили для ТЕЛА*/
+	#orange-girl-pink-bag{
+		position: absolute;
+		bottom: 70%;
+		left: 60%;
+		z-index: 1;
+	}
+	#orange-girl-pink-bag img{
+		width: 130px;
+	}
+
+	/*Стили для РУКИ*/
+	#arm-orange-girl-pink-bag{
+		position: absolute;
+		bottom: 71.8%;
+		left: 72.6%;	
+		transform-origin: 0% 75%;
+		z-index: 1;
+	}
+	#arm-orange-girl-pink-bag img{
+		width: 38px;
+	}
+
+
+
+
+
+
+
+	/*Стили для МАЛЬЧИКА С ЛУПОЙ*/
+	/*Стили для ТЕЛА*/
+	#body-boy-lupa{
+		position: absolute;
+		bottom: 26%;
+		left: 78%;
+		z-index: 1;
+	}
+	#body-boy-lupa img{
+		width: 95px;
+	}
+
+	/*Стили для ГОЛОВЫ*/
+	#head-boy-lupa{
+		position: absolute;
+		bottom: 51%;
+		left: 78.9%;
+		transform-origin: 50% 100%;	
+		z-index: 1;
+	}
+	#head-boy-lupa img{
+		width: 90px;
+	}
+	/*Стили для ЛУПЫ*/
+	#lupa-boy{
+		position: absolute;
+		bottom: 38.9%;
+		left: 71.6%;
+		transform-origin: 100% 75%;
+		z-index: 1;
+	}
+	#lupa-boy img{
+		width: 70px;
+	}
+
+
+	/*Далее идут стили для Текстов-подсказок*/
+	/*Текст-подсказка РАССКАЖУ-ТЕБЕ-О-НОВЫХ-СОБЫТИЯХ*/
+	#podskazka1{
+		position: absolute;
+		top: 3%;
+		left: -19%;
+		z-index: 3;
+	}
+	#podskazka1 img{
+		width: 230px;
+	}
+
+	/*Текст-подсказка РАССКАЖУ-ТЕБЕ-О-КОНКУРСАХ-И-АКЦИЯХ*/
+	#podskazka2{
+		position: absolute;
+		top: -29%;
+		left: 8%;
+		z-index: 3;
+	}
+	#podskazka2 img{
+		width: 230px;
+	}
+
+	/*Текст-подсказка ПОКАЖУ-ТВОРЧЕСТВО-ТВОИХ-ДРУЗЕЙ*/
+	#podskazka3{
+		position: absolute;
+		top: -24%;
+		left: 73%;
+		z-index: 3;
+	}
+	#podskazka3 img{
+		width: 230px;
+	}
+	/*Текст-подсказка НОВЫЕ-КНИГИ-У-МЕНЯ*/
+	#podskazka4{
+		position: absolute;
+		top: 6%;
+		left: 87%;
+		z-index: 3;
+	}
+	#podskazka4 img{
+		width: 230px;
+	}
+}
+
+
+
+
+@media only screen and (max-device-width:769px)/**/{
+	#block-logo{
+		overflow-x: scroll;
+	}
+	.img-title-site p{
+		font-size: 33px;
+	}
+	.img-title-site{
+	height: 135px;
+}
+	#background{
+	height: 708px;
+	top: 0px;
+	}	
+
+	#block-logo {
+	max-width: 100%;
+	min-width: 10%;
+	margin: 0 auto;
+	height: 556px;
+	position: relative;
+	
+	}
+	.img-from-logo img{
+		height: 400px;
+	}
+	#logo {
+	position: absolute;
+	max-width: 65%;
+	min-width: 65%;
+	height: 470px;
+	left: 50%;
+	top: 50%;
+	margin-left: -336px;
+	margin-top: -135px;
+	}
+	.logotip{
+		width: 630px;
+		max-width: 100%;
+		min-width: 100%;
+	}
+
+	/*Стили для блондинки*/
+	/*Стили для ГОЛОВЫ БЛОНДИНКИ*/
+	#head-blond{
+		position: absolute;
+		bottom: 48%;
+		left: 10%;
+		transform-origin: 50% 100%;
+		z-index: 1; 
+	}
+	#head-blond img{
+		width: 110px;
+	}
+
+
+	/*Стили для ТЕЛА БЛОНДИНКИ*/
+	#body-blond{
+		position: absolute;
+		bottom: 25%;
+		left: 10.9%;
+		opacity: 1;
+		z-index: 1;
+	}
+	#body-blond img{
+		width: 120px;
+	}
+
+
+
+	/*Стили для РЫЖЕЙ ДЕВОЧКИ С ГОЛУБЫМ ПОРТФЕЛЕМ*/
+	/*Стили для ТЕЛА*/
+	#orange-girl-blue-bag{
+		position: absolute;
+		bottom: 72.5%;
+		left: 38%;
+		z-index: 1;
+	}
+	#orange-girl-blue-bag img{
+		width: 120px;
+	}
+
+	/*Стили для РУКИ*/
+	#arm-orange-girl-blue-bag{
+		position: absolute;
+		bottom: 81.7%;
+		left: 34.7%;
+		transform-origin: 100% 75%;	
+		z-index: 1;
+	}
+	#arm-orange-girl-blue-bag img{
+		width: 40px;
+	}
+
+
+
+	/*Стили для РЫЖЕЙ ДЕВОЧКИ С РОЗОВЫМ ПОРТФЕЛЕМ*/
+	/*Стили для ТЕЛА*/
+	#orange-girl-pink-bag{
+		position: absolute;
+		bottom: 70%;
+		left: 60%;
+		z-index: 1;
+	}
+	#orange-girl-pink-bag img{
+		width: 130px;
+	}
+
+	/*Стили для РУКИ*/
+	#arm-orange-girl-pink-bag{
+		position: absolute;
+		bottom: 71.8%;
+		left: 72.6%;	
+		transform-origin: 0% 75%;
+		z-index: 1;
+	}
+	#arm-orange-girl-pink-bag img{
+		width: 38px;
+	}
+
+
+
+
+
+
+
+	/*Стили для МАЛЬЧИКА С ЛУПОЙ*/
+	/*Стили для ТЕЛА*/
+	#body-boy-lupa{
+		position: absolute;
+		bottom: 26%;
+		left: 78%;
+		z-index: 1;
+	}
+	#body-boy-lupa img{
+		width: 95px;
+	}
+
+	/*Стили для ГОЛОВЫ*/
+	#head-boy-lupa{
+		position: absolute;
+		bottom: 51%;
+		left: 78.9%;
+		transform-origin: 50% 100%;	
+		z-index: 1;
+	}
+	#head-boy-lupa img{
+		width: 90px;
+	}
+	/*Стили для ЛУПЫ*/
+	#lupa-boy{
+		position: absolute;
+		bottom: 38.9%;
+		left: 71.6%;
+		transform-origin: 100% 75%;
+		z-index: 1;
+	}
+	#lupa-boy img{
+		width: 70px;
+	}
+
+
+	/*Далее идут стили для Текстов-подсказок*/
+	/*Текст-подсказка РАССКАЖУ-ТЕБЕ-О-НОВЫХ-СОБЫТИЯХ*/
+	#podskazka1{
+		position: absolute;
+		top: 3%;
+		left: -19%;
+		z-index: 1;
+	}
+	#podskazka1 img{
+		width: 230px;
+	}
+
+	/*Текст-подсказка РАССКАЖУ-ТЕБЕ-О-КОНКУРСАХ-И-АКЦИЯХ*/
+	#podskazka2{
+		position: absolute;
+		top: -29%;
+		left: 8%;
+		z-index: 1;
+	}
+	#podskazka2 img{
+		width: 230px;
+	}
+
+	/*Текст-подсказка ПОКАЖУ-ТВОРЧЕСТВО-ТВОИХ-ДРУЗЕЙ*/
+	#podskazka3{
+		position: absolute;
+		top: -24%;
+		left: 73%;
+		z-index: 1;
+	}
+	#podskazka3 img{
+		width: 230px;
+	}
+	/*Текст-подсказка НОВЫЕ-КНИГИ-У-МЕНЯ*/
+	#podskazka4{
+		position: absolute;
+		top: 6%;
+		left: 87%;
+		z-index: 1;
+	}
+	#podskazka4 img{
+		width: 230px;
+	}
+}
+
+
+
+
+@media only screen and (max-device-width:426px) {
+	.img-title-site p{
+		font-size: 34px;
+	}
+	.img-from-logo img{
+		height: 400px;
+	}
+}
+
+
+
+@media only screen and (max-device-width:375px) {
+	.img-title-site p{
+		font-size: 32px;
+	}
+}
+
+
+@media only screen and (max-device-width:325px) {
+	.img-title-site p{
+		font-size: 30px;
+		/**/
+		justify-content: space-between;
+		font-size: 16px;
+		padding: 10px 0px;
+	}
+}

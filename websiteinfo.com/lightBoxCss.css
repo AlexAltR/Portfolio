@@ -1,0 +1,25 @@
+.lightBox-background{
+    background-color: #fff;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    position: fixed;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+.lightBox-block{
+    background-color: #000;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    position: fixed;
+    left: 30%;
+    top: 20%;
+    visibility: hidden;
+    width: 500px;
+    height: 375px;
+    border-radius: 15px;
+}

@@ -1,0 +1,7 @@
+#Запрет листинга каталогов при отсутвии файла index.php
+Options -Indexes
+
+#Все входящие URLы будут открывать "главную страницу" - index.php
+RewriteEngine On
+RewriteBase /
+

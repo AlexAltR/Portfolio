@@ -1,0 +1,1158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Roboto, sans-serif;
+}
+ body, main{
+    height: 100%;
+}
+/* Верхний блок шапки */
+.block-nav{
+    height: 50px;
+    width: 100%;
+    background-color: #7ab422;
+    border-bottom: 3px solid #c8e5a2;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0; 
+    z-index: 2;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-menu ul {
+    display: none;
+    background-color: #7ab422;
+    position: absolute;
+    top: 100%;
+  }
+.navbar-menu li {
+    float: left;
+    position: relative;
+    height: 100%;
+}
+.navbar-menu li:hover ul { 
+    display: block;
+    padding-top: 15px;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border-bottom: 3px solid #c8e5a2;
+}
+.navbar-menu li:hover ul li{ 
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.navbar-menu li:hover ul li a{ 
+    font-size: 12px;
+    width: 100%;
+}
+.navbar-menu, .navbar-menu ul {
+    list-style-type: none;
+}
+.navbar-menu {
+    width: 560px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-home{
+    font-size: 24px;
+    color: #fff;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+nav a:hover{
+    opacity: 0.8;
+    font-size: 12px;
+}
+
+
+/* Нижницй блок шапки */
+.down-header{
+    margin-top: 53px;
+    width: 100%;
+    height: 140px;
+    background: radial-gradient(at bottom center, #96729e -25%, #70407c 55%);
+    border-bottom: 3px solid #fffdfa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper-down-header{
+    width: 945px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 263px;
+}
+.phons{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+}
+.phons a{
+    text-decoration: none;
+    color: #fff;
+}
+.mobile-phone{
+    font-size: 21px;
+}
+.home-phone{
+    font-size: 28px;
+}
+.phone-button button{
+    width: 280px;
+    height: 60px;
+    border: 3px solid #000;
+    border-radius: 15px;
+    background-image: linear-gradient(#ba93d6, #68297a);
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.phone-button button:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+/* Блок нижняя шапка АДАПТИВНАЯ ВЕРСИЯ ДЛЯ ПЛАНШЕТОВ И СМАРТАФОНОВ*/
+/* ДЛЯ ПЛАНШЕТОВ*/
+@media (max-width: 1000px){
+
+    .wrapper-down-header{
+        width: 655px;
+    }
+    .wrapper-down-header{
+        justify-content: space-around;
+    }
+    .logo img{
+        width: 200px;
+    }
+    .logo p{
+        font-size: 14px;
+    }
+    .img-phone img{
+        width: 50px;
+    }
+    .mobile-phone{
+        font-size: 18px;
+    }
+    .home-phone{
+        font-size: 22px;
+    }
+    .phone-button button{
+        width: 160px;
+        height: 55px;
+        font-size: 14px;
+    }
+}
+/* ДЛЯ СМАРТАФОНОВ*/
+@media (max-width: 700px){
+    
+    .down-header{
+        height: 320px;
+    }
+    .wrapper-down-header{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .logo img{
+        width: 230px;
+    }
+    
+}
+
+
+
+/* Блок первый с картинкой, с формой и тегами h1 h2 */
+.mouse-parallax {
+    height: 890px;
+	position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #bcbabb;
+}
+.block-face-site {
+    position: absolute;
+    /* background-image: url("img/paralax-box.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    width: 100%;
+    height: 100%;
+    transition: all 0.1s ease;
+}
+.wrapper-face-site {
+    padding-top: 60px;
+    padding-bottom: 15px;    
+    width: 975px;
+    margin: 0 auto;
+}
+.block-h1 {
+    background-color: rgba(255,255,255, 0.6);
+    padding: 15px;
+    width: 800px;
+    font-size: 28px;
+}
+.info-form {
+    display: flex;
+}
+.info-block {
+    background-color: rgba(255,255,255, 0.6);
+    margin-top: 30px;
+    padding: 15px;
+    width: 450px;
+    font-weight: 300;
+}
+.info-block h2{
+    font-weight: 300;
+    font-size: 29px;
+}
+.block-form {
+    margin-left: 37px;
+    margin-top: 30px;
+    background-color: rgba(0,0,0, 0.6);
+    border-radius: 15px;
+    color: #fff;
+}
+.wrapper-block-form {
+    margin: 47px 50px 33px 50px;
+    font-weight: 300;
+    font-size: 18px;
+}
+.wrapper-block-form p{
+    margin-bottom: 20px;
+}
+input[type="tel"]{
+    height: 50px;
+    width: 300px;
+    border-radius: 8px;
+    color: #70407c;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-bottom: 3px solid #afb0b5;
+    font-size: 18px;
+}
+input[type="button"]{
+    height: 60px;
+    width: 325px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: #ff8201;
+    border-bottom: 3px solid #c44502;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    background-image: linear-gradient(#ff8201, #fb6107);
+}
+input[type="button"]:hover{
+    opacity: 0.9;
+}
+::-webkit-input-placeholder {
+    color:#70407c;
+}
+/* Firefox 19+ */
+::-moz-placeholder {
+    color:#70407c;
+}
+/* Firefox 18- */
+:-moz-placeholder {
+    color:#70407c;
+}
+:-ms-input-placeholder {
+    color:#70407c;
+}
+.wrapper-block-form p:last-child{
+    font-size: 16px;
+}
+.computer-mouse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 45px;
+    width: 50px;
+    margin: 0 auto;
+}
+.computer-mouse a{
+    text-decoration: none;
+    color: #fff;
+}
+.text-mouse{
+    font-size: 14px;
+    font-weight: 300;
+}
+.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    
+}
+.img-i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 36px;
+}
+.img-i i:first-child{
+    margin-top: -5px;
+}
+.img-i i{
+    margin-top: -18px;
+}
+#bgimg{
+    width: 110%;
+    height: 110%;
+    position: relative;
+    z-index: -1;
+}
+
+/* #banner{
+    width: 100%;
+    
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    font-weight: 300;
+    z-index: 1;
+    border-bottom: 3px solid #bcbabb;
+    }
+    #banner img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* width: 110%;
+    height: 110%;
+    }*/
+
+
+
+
+
+/* Блок первый с картинкой, с формой и тегами h1 h2 АДАПТИВНАЯ ВЕРСИЯ ДЛЯ ПЛАНШЕТОВ И СМАРТАФОНОВ*/
+/* ДЛЯ ПЛАНШЕТОВ*/
+@media (max-width: 1000px){
+
+    .mouse-parallax {
+        height: 1120px;
+    }
+    .wrapper-face-site {
+        padding-top: 60px;
+        padding-bottom: 15px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .block-h1 {
+        padding: 10px;
+        width: 600px;
+        font-size: 20px;
+        margin: 0 auto;
+    }
+    .info-form {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .info-blocks{
+        margin: 0 auto;
+    }
+    .info-block {
+        margin-top: 25px;
+        padding: 10px;
+        width: 450px;
+    }
+    .info-block:last-child {
+        margin-bottom: 25px;
+    }
+    .info-block h2{
+        font-size: 24px;
+    }
+    .block-form {
+        margin: 0 auto;
+        width: 500px;
+        background-color: rgba(0,0,0, 0.6);
+        border-radius: 15px;
+        color: #fff;
+    }
+}
+
+/* ДЛЯ СМАРТАФОНОВ*/
+@media (max-width: 700px){
+
+    .block-h1 {
+        padding: 10px;
+        width: 500px;
+        font-size: 18px;
+        margin: 0 auto;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+/* Блок преимущества каркасного строительства из ЛМК */
+.block-plus-build{
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 3px solid #b5b5b5;
+    padding-top: 30px;
+    padding-bottom: 50px;    
+}
+.wrapper-plus-build{
+    width: 930px;
+    margin: 0 auto;
+}
+.wrapper-plus-build h2{
+    text-align: center;
+    padding-bottom: 15px;
+    font-weight: 400;
+}
+.wrapper-plus-build hr{
+    width: 15%;
+    margin: 0 42.5% 0 42.5%;
+}
+.block-row1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+}
+.block-row2{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -50px;
+}
+.block-plus-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 210px;
+
+}
+.block-plus-img img{
+    width: 110px;
+}
+.block-plus-img p{
+    text-align: center;
+    font-weight: 100;
+}
+
+/* Блок преимущества каркасного строительства из ЛМК АДАПТИВНАЯ ВЕРСИЯ ДЛЯ ПЛАНШЕТОВ И СМАРТАФОНОВ*/
+/* ДЛЯ ПЛАНШЕТОВ*/
+@media (max-width: 1000px){
+
+    .wrapper-plus-build{
+        width: 730px;
+    }
+    .wrapper-plus-build h2{
+        padding-bottom: 15px;
+        font-size: 22px;
+    }
+    .block-row1{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+    }
+    .block-row2{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 0px;
+    }
+    .block-plus-build{
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+
+}
+
+/* ДЛЯ СМАРТАФОНОВ*/
+@media (max-width: 700px){
+
+    .wrapper-plus-build{
+        width: 450px;
+        padding: 5px;
+    }
+    .wrapper-plus-build h2{
+        padding-bottom: 15px;
+        font-size: 22px;
+    }
+    .block-row1{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+        margin-bottom: 15px;    
+    }
+    .block-row2{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 0px;
+    }
+    .block-plus-build{
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+    
+}
+
+
+/* БЛОК ФОТОГРАФИЙ СО ЗДАНИЯМИ */
+.blocks-hangar{
+    width: 100%;
+    background-image: url(img/bg-hangar.png);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 3px solid #fff;
+}
+.wrapper-blocks-hangar{
+    width: 920px;
+    margin: 0 auto;
+}
+.wrapper-blocks-hangar h2{
+    text-align: center;
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: 26px;
+}
+.wrapper-blocks-hangar hr{
+    width: 15%;
+    margin: 0 42.5% 0 42.5%;
+}
+.blocks-hangars{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    margin-top: 35px;
+}
+.hangar img{
+    border: 1px solid #d1d1d3;
+}
+.hangar img:hover{
+    border: 1px solid #86b624;
+    cursor: pointer;
+}
+
+
+/* Блок фотографий со зданиями АДАПТИВНАЯ ВЕРСИЯ ДЛЯ ПЛАНШЕТОВ И СМАРТАФОНОВ*/
+/* ДЛЯ ПЛАНШЕТОВ*/
+@media (max-width: 1000px){
+    
+    .blocks-hangars{
+        grid-template-columns: 310px 310px;
+        justify-items: center;
+        justify-content: center;
+    }
+    .wrapper-blocks-hangar{
+        width: 700px;
+        margin: 0 auto;
+    }
+    .hangar:nth-child(9){
+        margin-left: 315px;
+    }
+    
+}
+
+/* ДЛЯ СМАРТАФОНОВ*/
+@media (max-width: 700px){
+    .wrapper-blocks-hangar{
+        width: 100%;
+    }
+    .blocks-hangars{
+        
+        grid-template-columns: auto;
+        justify-items: center;
+        justify-content: center;
+    }
+    .wrapper-blocks-hangar h2{
+        font-size: 22px;
+    }
+    .hangar:nth-child(9){
+        margin-left: 0px;
+    }
+}
+
+
+
+/* Блок с напоминалкой о заказе расчета работ */
+.slogan{
+    color: #fff;
+}
+.slogan h2{
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+}
+.slogan p{
+    font-size: 22px;
+    letter-spacing: 1.3px;
+}
+
+/* Блок с напоминалкой о заказе расчета работ АДАПТИВНАЯ ВЕРСИЯ ДЛЯ ПЛАНШЕТОВ И СМАРТАФОНОВ*/
+/* ДЛЯ ПЛАНШЕТОВ*/
+@media (max-width: 1000px){
+    
+    .slogan h2{
+        font-size: 26px;
+    }
+    .slogan p{
+        font-size: 16px;
+        letter-spacing: 1.3px;
+    }
+}
+
+/* ДЛЯ СМАРТАФОНОВ*/
+@media (max-width: 700px){
+    
+    .slogan{
+        text-align: center;
+    }
+    .slogan h2{
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    .block-slogan{
+        height: 170px;
+    }
+
+}
+
+
+/* Блок шагов решения проблемы */
+
+.block-steps {
+    width: 100%;
+    background-image: url(img/bg-hangar.png);
+    border-bottom: 3px solid #b6b6b6;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.steps-wrapper {
+    width: 50%;
+    margin: 0 auto;
+}
+.header-steps{
+    width: 50%;
+    margin: 0 auto;
+}
+.header-steps h2{
+    text-align: center;
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: 26px;
+}
+.steps-hr{
+    width: 15%;
+    margin: 0 42.5% 0 42.5%;
+    /* position: absolute;
+    left: 46.3%; */
+}
+.blocks-step {
+    padding-top: 65px;
+    width: 50%;
+}
+.step-row1 {
+    width: 650px;
+    display: flex;
+    justify-content: center;
+}
+.step-row1 hr{
+    position: absolute;
+    top: 10px;
+    margin-left: -238px;
+    width: 170px;
+    transform: rotate(140deg);
+	border: none;
+	border-top: 3px dotted #80ba27;
+}
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+}
+.step img{
+    width: 133px;
+    height: 146px;
+    z-index: 1;
+}
+.step hr{
+    position: relative;
+    left: 0;
+}
+.step p{
+    width: 175px;    
+    text-align: center;
+    font-weight: 300;
+}
+.step-row2 {
+    display: flex;
+    align-items: flex-start;
+    width: 650px;
+    justify-content: space-between;
+    margin-top: -80px;
+}
+.step-row2 hr{
+    position: relative;
+    top: 10px;
+    margin-right: -238px;
+    width: 170px;
+    transform: rotate(-140deg);
+	border: none;
+	border-top: 3px dotted #80ba27;
+}
+.step-row3 {
+    display: flex;
+    align-items: flex-start;
+    width: 650px;
+    justify-content: space-between;
+    margin-left: 240px;
+    margin-top: -50px;
+}
+.step-row3 .hr1{
+    position: relative;
+    top: -170px;
+    margin-left: 238px;
+    width: 170px;
+    transform: rotate(140deg);
+	border: none;
+	border-top: 3px dotted #80ba27;
+}
+.step-row3 hr{
+    position: relative;
+    top: 15px;
+    margin-left: -238px;
+    width: 175px;
+    transform: rotate(140deg);
+	border: none;
+	border-top: 3px dotted #80ba27;
+}
+.step-row4 {
+    width: 650px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -90px;
+}
+.step-row4 hr{
+    position: relative;
+    top: 10px;
+    margin-left: -230px;
+    width: 165px;
+    transform: rotate(140deg);
+	border: none;
+	border-top: 3px dotted #80ba27;
+}
+.step-row5 {
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+/* Блок 7 шагами решения проблемы АДАПТИВНАЯ ВЕРСИЯ ДЛЯ ПЛАНШЕТОВ И СМАРТАФОНОВ*/
+/* ДЛЯ ПЛАНШЕТОВ*/
+@media (max-width: 1190px){
+    
+    .block-steps {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .step-row1 {
+        width: 450px;
+    }
+    .step-row1 hr{
+        position: relative;
+        margin-left: -200px;
+        transform: rotate(115deg);
+    }
+    .step-row2 {
+        width: 450px;
+        margin-top: -30px;
+    }
+    .step-row2 hr{
+        transform: rotate(-135deg);
+    }
+    .step-row3 {
+        width: 450px;
+        margin-left: 160px;
+        margin-top: -50px;
+    }
+    .step-row3 .hr1 {
+        top: -190px;
+        margin-left: 100px;
+        transform: rotate(130deg);
+    }
+    .step-row3 hr {
+        position: relative;
+        top: 15px;
+        margin-left: -180px;
+        transform: rotate(120deg);
+        border: none;
+        border-top: 3px dotted #80ba27;
+    }
+    .step-row4 {
+        width: 450px;
+        margin-top: -90px;
+        margin-left: 30px;
+    }
+    .step-row5 {
+        width: 450px;
+        margin-top: -20px;
+    }
+}
+
+/* ДЛЯ СМАРТАФОНОВ*/
+@media (max-width: 820px){
+    
+    .steps-wrapper {
+        width: 50%;
+        margin-left: 10%;
+    }
+    .header-steps{
+        margin: 0 auto;
+    }
+
+}
+@media (max-width: 680px){
+    
+    .steps-wrapper {
+        width: 50%;
+        margin-left: 2%;
+    }
+}
+@media (max-width: 630px){
+    
+    .steps-wrapper {
+        width: 50%;
+        margin-left: 0;
+    }
+}
+
+
+
+
+
+
+/* Блок с контактами и картой */
+.block-contacts{
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 58px;
+}
+.contacts-wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+.contacts-wrapper h2{
+    text-align: center;
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: 26px;
+}
+.contacts-wrapper hr{
+    width: 7%;
+    margin: 0 46.5% 0 46.5%;
+}
+.data-contacts{
+    display: flex;
+    max-width: 70%;
+    margin: 0 auto;
+    justify-content: space-around;
+    margin-top: 95px;
+    margin-bottom: 45px;
+}
+.card-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+}
+.card-contact hr{
+    width: 52px;
+    color: #8ab62b;
+    border: .5px solid #8ab62b;
+    background-color: #8ab62b;
+    position: relative;
+    left: 0;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+.fk{
+    color: #67446c;
+    font-size: 65px;
+}
+.card-contact h4{
+    font-weight: 14px;
+    margin-bottom: 25px;
+}
+.card-contact p{
+    text-align: center;
+    font-weight: 300;
+}
+.card-phons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-phons a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+}
+.card-mail{
+    color: #000;
+    font-weight: 300;
+}
+.block-map{
+    max-width: 1260px;
+    min-width: 350px;
+    margin: 0 auto;
+}
+#yandexmap{
+    width: 100%;
+    height: 510px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+/* Блок с контактами и картой АДАПТИВНАЯ ВЕРСИЯ ДЛЯ ПЛАНШЕТОВ И СМАРТАФОНОВ*/
+/* ДЛЯ ПЛАНШЕТОВ*/
+@media (max-width: 1000px){
+    
+    .block-contacts{
+        padding-top: 50px;
+        padding-bottom: 58px;
+    }
+    .data-contacts{
+        max-width: 85%;
+    }
+    .contacts-wrapper hr{
+        left: 42.8%;
+    }
+    .data-contacts{
+        margin-top: 55px;
+        margin-bottom: 45px;
+    }
+}
+
+/* ДЛЯ СМАРТАФОНОВ*/
+@media (max-width: 700px){
+    
+    .data-contacts{
+        max-width: 95%;
+    }
+    .card-contact hr{
+        position: relative;
+        left: 0;
+    }
+}
+
+
+
+/* Блок подвал */
+.block-footer {
+    width: 100%;
+    background-color: #70407c;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.footer-wrapper {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.logo p{
+    color: #fff;
+    font-weight: 400;
+}
+.footer-links {
+    padding-top: 35px;
+}
+.col-2 h2{
+    /* font-size: 18px; */
+    color: #fff;
+    font-weight: 400;
+    padding-bottom: 20px;
+    letter-spacing: .9px;
+}
+.button-footer button{
+    width: 260px;
+    height: 65px;
+    border: 3px solid #461650;
+    border-radius: 15px;
+    background-image: linear-gradient(#ff8201, #fb6107);
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button-footer button:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.col-3 {
+    margin-left: -80px;
+}
+.logo-website-firm {
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+}
+.logo-website-firm p{
+    padding-right: 10px;
+    font-weight: 300;
+    color: #fff;
+    text-align: right;
+}
+
+
+/* Блок подвала АДАПТИВНАЯ ВЕРСИЯ ДЛЯ ПЛАНШЕТОВ И СМАРТАФОНОВ*/
+/* ДЛЯ ПЛАНШЕТОВ*/
+@media (max-width: 1525px){
+    
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-1{
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .col-2{
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    .col-3{
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 0px;
+    }
+
+}
+
+@media (max-width: 1350px){
+    
+    .footer-wrapper {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1160px){
+    
+    .footer-wrapper {
+        width: 75%;
+    }
+}
+@media (max-width: 1080px){
+    
+    .footer-wrapper {
+        width: 80%;
+    }
+}
+@media (max-width: 1000px){
+    
+    .footer-wrapper {
+        width: 90%;
+    }
+}
+@media (max-width: 890px){
+    
+    .footer-wrapper {
+        width: 95%;
+    }
+}
+@media (max-width: 850px){
+    
+    .footer-wrapper {
+        width: 100%;
+    }
+}
+@media (max-width: 800px){
+    
+    .block-footer {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+    .col-1{
+        flex-direction: column;
+    }
+    .footer-links {
+        padding-top: 25px;
+    }
+    .col-2{
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    .col-2 h2{
+        text-align: center;
+    }
+    .mobile-phone a{
+        text-align: center;
+    }
+    .home-phone a{
+        text-align: center;
+    }
+    .col-3{
+        flex-direction: column;
+        margin-left: 0px;
+    }
+    .phons{
+        margin-top: 15px;
+        align-items: center;
+    }
+    .logo-website-firm {
+        padding-top: 15px;
+    }
+}
